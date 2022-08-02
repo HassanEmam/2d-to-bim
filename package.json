@@ -1,0 +1,51 @@
+{
+  "name": "2d-to-bim",
+  "version": "1.0.0",
+  "description": "Convert drawings to BIM model in IFC format",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./src/webpack.prod.js",
+    "dev": "webpack serve --config ./src/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HassanEmam/2d-to-bim.git"
+  },
+  "keywords": [
+    "BIM",
+    "IFC",
+    "2D",
+    "DXF",
+    "DWG",
+    "CAD"
+  ],
+  "author": "Hassan Emam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HassanEmam/2d-to-bim/issues"
+  },
+  "homepage": "https://github.com/HassanEmam/2d-to-bim#readme",
+  "devDependencies": {
+    "@types/dat.gui": "^0.7.7",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.23",
+    "css-loader": "^6.7.1",
+    "gsap": "^3.10.4",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@types/three": "^0.134.0",
+    "axios": "^0.27.2",
+    "express": "^4.17.3",
+    "three": "^0.135.0",
+    "web-ifc": "^0.0.35",
+    "web-ifc-three": "^0.0.118"
+  }
+}
