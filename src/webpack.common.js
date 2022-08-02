@@ -16,6 +16,11 @@ module.exports = {
     ],
   },
   resolve: {
+    fallback: {
+      fs: false,
+      path: false,
+      os: false,
+    },
     alias: {
       three: path.resolve("./node_modules/three"),
     },
