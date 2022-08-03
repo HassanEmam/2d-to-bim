@@ -10,17 +10,19 @@ fInput.addEventListener(
   "change",
   async (e) => {
     if (fInput.files) {
-      r = new Reader(fInput.files[0]);
-      //   await r.read();
+      r = await new Reader(fInput.files[0]);
       console.log("r", r);
       console.log("layers", r.entities);
+      r.on("dxfloaded", async () => {
+        console.log("dxfloaded");
+        console.log("GetAllLayers", await r.getAllLayers());
+        console.log(
+          "GetEntitiesByLayer",
+          await r.getEntitiesByLayer("BlueLayer")
+        );
+      });
       (window as any).dxfreader = r;
     }
   },
   false
 );
-
-async function printLayers() {
-  const layers = await r.getAllLayers();
-  console.log(r.entities);
-}
